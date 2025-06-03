@@ -1,49 +1,37 @@
-Dados de entrada X carregados de 'drp'. Formato: (10772, 9)
+Dados de entrada X carregados       de 'drp'. Formato: (10772, 9)
 Iniciando treinamento e avaliação do circuito quântico (não supervisionado)...
 Total de combinações de VQC a serem testadas: 4
 
 --- Processando VQC para n_qubits=2 ---
   > Treinando VQC com n_layers=1, step_size=0.1, batch_size=32, n_epochs=10
-  > VQC treinado. Gerando features. Tempo de VQC: 889.43s
-
+  > VQC treinado. Gerando features. Tempo de VQC: 1024.50s
   > Treinando VQC com n_layers=3, step_size=0.1, batch_size=32, n_epochs=10
-  > VQC treinado. Gerando features. Tempo de VQC: 2246.11s
+  > VQC treinado. Gerando features. Tempo de VQC: 2501.63s
 
 --- Processando VQC para n_qubits=4 ---
   > Treinando VQC com n_layers=1, step_size=0.1, batch_size=32, n_epochs=10
-  > VQC treinado. Gerando features. Tempo de VQC: 1605.42s
-
+  > VQC treinado. Gerando features. Tempo de VQC: 1724.53s
   > Treinando VQC com n_layers=3, step_size=0.1, batch_size=32, n_epochs=10
-  > VQC treinado. Gerando features. Tempo de VQC: 4452.70s
+  > VQC treinado. Gerando features. Tempo de VQC: 4719.10s
 
 --- Resumo de Performance do VQC Não Supervisionado + Clustering Clássico ---
-
-+------------------------------+------------+------------+--------------+------------------+------------------+----------------------+
-|          Algoritmo           | VQC Qubits | VQC Layers | VQC Time (s) | Clustering Param | Silhouette Score | Davies Bouldin Score |
-+------------------------------+------------+------------+--------------+------------------+------------------+----------------------+
-
-|    K-Means (VQC Features)    |     2      |     1      |    889.43    |   n_clusters=2   |      0.7012      |        0.4053        |
-|    K-Means (VQC Features)    |     2      |     1      |    889.43    |   n_clusters=3   |      0.6712      |        0.4422        |
-| Agglomerative (VQC Features) |     2      |     1      |    889.43    |   n_clusters=2   |      0.6835      |        0.3998        |
-| Agglomerative (VQC Features) |     2      |     1      |    889.43    |   n_clusters=3   |      0.6670      |        0.4400        |
-|    DBSCAN (VQC Features)     |     2      |     1      |    889.43    |     eps=0.5      |       N/A        |         N/A          |
-|    DBSCAN (VQC Features)     |     2      |     1      |    889.43    |     eps=1.0      |       N/A        |         N/A          |
-|    K-Means (VQC Features)    |     2      |     3      |   2246.11    |   n_clusters=2   |      0.6965      |        0.4120        |
-|    K-Means (VQC Features)    |     2      |     3      |   2246.11    |   n_clusters=3   |      0.6706      |        0.4442        |
-| Agglomerative (VQC Features) |     2      |     3      |   2246.11    |   n_clusters=2   |      0.6347      |        0.4242        |
-| Agglomerative (VQC Features) |     2      |     3      |   2246.11    |   n_clusters=3   |      0.6427      |        0.4575        |
-|    DBSCAN (VQC Features)     |     2      |     3      |   2246.11    |     eps=0.5      |       N/A        |         N/A          |
-|    DBSCAN (VQC Features)     |     2      |     3      |   2246.11    |     eps=1.0      |       N/A        |         N/A          |
-|    K-Means (VQC Features)    |     4      |     1      |   1605.42    |   n_clusters=2   |      0.5441      |        0.6477        |
-|    K-Means (VQC Features)    |     4      |     1      |   1605.42    |   n_clusters=3   |      0.5988      |        0.5001        |
-| Agglomerative (VQC Features) |     4      |     1      |   1605.42    |   n_clusters=2   |      0.5533      |        0.6263        |
-| Agglomerative (VQC Features) |     4      |     1      |   1605.42    |   n_clusters=3   |      0.5702      |        0.5346        |
-|    DBSCAN (VQC Features)     |     4      |     1      |   1605.42    |     eps=0.5      |       N/A        |         N/A          |
-|    DBSCAN (VQC Features)     |     4      |     1      |   1605.42    |     eps=1.0      |       N/A        |         N/A          |
-|    K-Means (VQC Features)    |     4      |     3      |   4452.70    |   n_clusters=2   |      0.6902      |        0.4165        |
-|    K-Means (VQC Features)    |     4      |     3      |   4452.70    |   n_clusters=3   |      0.6531      |        0.4544        |
-| Agglomerative (VQC Features) |     4      |     3      |   4452.70    |   n_clusters=2   |      0.6034      |        0.4417        |
-| Agglomerative (VQC Features) |     4      |     3      |   4452.70    |   n_clusters=3   |      0.6304      |        0.4684        |
-|    DBSCAN (VQC Features)     |     4      |     3      |   4452.70    |     eps=0.5      |       N/A        |         N/A          |
-|    DBSCAN (VQC Features)     |     4      |     3      |   4452.70    |     eps=1.0      |       N/A        |         N/A          |
-+------------------------------+------------+------------+--------------+------------------+------------------+----------------------+
++------------------------------+------------+------------+--------------+----------------+------------------+------------------+----------------------+
+|          Algoritmo           | VQC Qubits | VQC Layers | VQC Time (s) | Train Time (s) | Clustering Param | Silhouette Score | Davies Bouldin Score |
++------------------------------+------------+------------+--------------+----------------+------------------+------------------+----------------------+
+|    K-Means (VQC Features)    |     2      |     1      |   1024.50    |     0.03      |   n_clusters=2   |      0.7007      |        0.4061        |
+|    K-Means (VQC Features)    |     2      |     1      |   1024.50    |     0.03      |   n_clusters=3   |      0.6730      |        0.4408        |
+| Agglomerative (VQC Features) |     2      |     1      |   1024.50    |     2.51      |   n_clusters=2   |      0.6658      |        0.4020        |
+| Agglomerative (VQC Features) |     2      |     1      |   1024.50    |     2.50      |   n_clusters=3   |      0.6718      |        0.4413        |
+|    K-Means (VQC Features)    |     2      |     3      |   2501.63    |     0.02      |   n_clusters=2   |      0.6965      |        0.4120        |
+|    K-Means (VQC Features)    |     2      |     3      |   2501.63    |     0.03      |   n_clusters=3   |      0.6692      |        0.4465        |
+| Agglomerative (VQC Features) |     2      |     3      |   2501.63    |     2.37      |   n_clusters=2   |      0.6805      |        0.4170        |
+| Agglomerative (VQC Features) |     2      |     3      |   2501.63    |     2.38      |   n_clusters=3   |      0.6396      |        0.4455        |
+|    K-Means (VQC Features)    |     4      |     1      |   1724.53    |     0.04      |   n_clusters=2   |      0.5442      |        0.6468        |
+|    K-Means (VQC Features)    |     4      |     1      |   1724.53    |     0.03      |   n_clusters=3   |      0.5982      |        0.4997        |
+| Agglomerative (VQC Features) |     4      |     1      |   1724.53    |     2.33      |   n_clusters=2   |      0.5702      |        0.5636        |
+| Agglomerative (VQC Features) |     4      |     1      |   1724.53    |     2.35      |   n_clusters=3   |      0.5848      |        0.4830        |
+|    K-Means (VQC Features)    |     4      |     3      |   4719.10    |     0.02      |   n_clusters=2   |      0.6907      |        0.4173        |
+|    K-Means (VQC Features)    |     4      |     3      |   4719.10    |     0.04      |   n_clusters=3   |      0.6509      |        0.4579        |
+| Agglomerative (VQC Features) |     4      |     3      |   4719.10    |     2.42      |   n_clusters=2   |      0.5782      |        0.4350        |
+| Agglomerative (VQC Features) |     4      |     3      |   4719.10    |     2.42      |   n_clusters=3   |      0.6052      |        0.4766        |
++------------------------------+------------+------------+--------------+----------------+------------------+------------------+----------------------+
